@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+
+message: >
+  If you use this software in your research, please cite this repository.
+  Citation metadata will be updated after the associated research paper is published.
+
+title: "RL AI vs AI Snake Battle: A Comparative Reinforcement Learning Framework for Competitive Multi-Agent Learning"
+
+abstract: >
+  A research-oriented reinforcement learning framework for comparing
+  Deep Reinforcement Learning and Classical Reinforcement Learning
+  in a competitive multi-agent Snake environment. The project
+  evaluates a Rainbow DQN-lite agent against a Tabular Q-Learning
+  agent through continuous self-play.
+
+type: software
+
+authors:
+  - family-names: Bhuiyan
+    given-names: Arhab Jahin
+
+repository-code: "https://github.com/ArhabJahin/RL-AI-vs-AI-Battle"
+
+keywords:
+  - Reinforcement Learning
+  - Deep Reinforcement Learning
+  - Multi-Agent Systems
+  - Artificial Intelligence
+  - Snake Game
+  - Rainbow DQN
+  - Double DQN
+  - Dueling DQN
+  - Prioritized Experience Replay
+  - Q-Learning
+  - PyTorch
+  - Self-Play
+
+version: "1.0.0"
+
+date-released: "2026-07-06"
+
+language: en
+
+license: NONE
+
+url: "https://github.com/ArhabJahin/RL-AI-vs-AI-Battle"
