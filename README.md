@@ -7,8 +7,6 @@
 ![Pygame](https://img.shields.io/badge/Pygame-Simulation-green.svg)
 ![Status](https://img.shields.io/badge/Status-Active%20Development-success)
 
-##
-
 ## 📸 Demo
 
 <p align="center">
