@@ -205,7 +205,7 @@ This allows direct comparison of learned policies.
 # Directory Structure
 
 ```
-RL-AI-VS-AI-Battle/
+RL-AI-vs-AI-Battle/
 │
 ├── models_red_dqn/
 │   ├── red_snake_dueling_ddqn_nstep_v1.pth
@@ -229,13 +229,13 @@ RL-AI-VS-AI-Battle/
 Clone the repository
 
 ```bash
-git clone https://github.com/ArhabJahin/RL-AI-VS-AI-Battle.git
+git clone https://github.com/ArhabJahin/RL-AI-vs-AI-Battle.git
 ```
 
 Move into the project
 
 ```bash
-cd RL-AI-VS-AI-Battle
+cd RL-AI-vs-AI-Battle
 ```
 
 Install dependencies
