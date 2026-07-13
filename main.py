@@ -1132,8 +1132,8 @@ def draw_compare_graph(surface, red_values, blue_values, x, y, w, h, title, red_
     pygame.draw.line(surface, (90, 100, 120), (inner.left, inner.top), (inner.left, inner.bottom), 1)
 
     surface.blit(small_font.render(title, True, (220, 220, 220)), (rect.x + 12, rect.y + 8))
-    surface.blit(small_font.render(red_label, True, (255, 120, 120)), (rect.x + 12, rect.y + 24))
-    surface.blit(small_font.render(blue_label, True, (80, 190, 255)), (rect.x + 128, rect.y + 24))
+    surface.blit(small_font.render(red_label, True, (255, 120, 120)), (inner.left + 4, rect.y + 24))
+    surface.blit(small_font.render(blue_label, True, (80, 190, 255)), (inner.left + 145, rect.y + 24))
 
     if len(red_values) < 2 and len(blue_values) < 2:
         surface.blit(
@@ -1184,9 +1184,18 @@ def draw_death_rate_graph(surface, red_deaths, blue_deaths, x, y, w, h, window=2
     if inner.w <= 0 or inner.h <= 0:
         return
 
-    title = f"Death Rate Trend ({window} ep avg)"
-    surface.blit(small_font.render(title, True, (220, 220, 220)), (rect.x + 12, rect.y + 8))
-    surface.blit(small_font.render("Lower is better", True, (180, 180, 190)), (rect.right - 112, rect.y + 8))
+    title = f"Death Rate ({window} ep avg)"
+    surface.blit(
+        small_font.render(title, True, (220, 220, 220)),
+        (rect.x + 12, rect.y + 8)
+    )
+
+    hint = "Lower is better"
+    hint_surface = small_font.render(hint, True, (180, 180, 190))
+    surface.blit(
+        hint_surface,
+        (rect.right - hint_surface.get_width() - 12, rect.y + 8)
+    )
 
     for pct in (0, 50, 100):
         py = inner.bottom - int((pct / 100.0) * inner.h)
@@ -1225,8 +1234,8 @@ def draw_death_rate_graph(surface, red_deaths, blue_deaths, x, y, w, h, window=2
 
     red_latest = red_rates[-1] if red_rates else 0.0
     blue_latest = blue_rates[-1] if blue_rates else 0.0
-    surface.blit(small_font.render(f"Red {red_latest:.0f}%", True, (255, 120, 120)), (rect.x + 12, rect.y + 26))
-    surface.blit(small_font.render(f"Blue {blue_latest:.0f}%", True, (80, 190, 255)), (rect.x + 100, rect.y + 26))
+    surface.blit(small_font.render(f"Red {red_latest:.0f}%", True, (255, 120, 120)), (inner.left + 4, rect.y + 26))
+    surface.blit(small_font.render(f"Blue {blue_latest:.0f}%", True, (80, 190, 255)), (inner.left + 115, rect.y + 26))
 
 
 def ensure_csv_header():
@@ -1562,7 +1571,7 @@ while True:
 
         screen.blit(
             font.render(
-                f"RED Rainbow  Score: {score1}  Best: {best1}  Len: {len(snake1)}  SPD: {cur_speed1:.0f}",
+                f"RED DQN  Score: {score1}  Best: {best1}  Len: {len(snake1)}  SPD: {cur_speed1:.0f}",
                 True,
                 (255, 100, 100),
             ),
@@ -1604,7 +1613,7 @@ while True:
         panel_x = BOARD_WIDTH + 10
         pygame.draw.rect(screen, (10, 12, 20), (BOARD_WIDTH, 0, PANEL_WIDTH, BOARD_HEIGHT))
         screen.blit(font.render("Algorithm Comparison", True, (220, 220, 220)), (panel_x, 12))
-        screen.blit(small_font.render(f"Red Rainbow-lite episodes {red_agent.episodes} | best {red_agent.best_score}", True, (255, 140, 140)), (panel_x, 40))
+        screen.blit(small_font.render(f"Red DQN {red_agent.episodes} | best {red_agent.best_score}", True, (255, 140, 140)), (panel_x, 40))
         screen.blit(small_font.render(f"Blue Q episodes {blue_agent.episodes} | best {blue_agent.best_score}", True, (120, 200, 255)), (panel_x, 60))
         screen.blit(small_font.render(f"Red loss {red_agent.last_loss:.3f} td {red_agent.last_td_error:.2f} eps {red_agent.epsilon:.3f}", True, (220, 220, 220)), (panel_x, 82))
         screen.blit(small_font.render(f"Blue qstates {len(blue_agent.qtable)} eps {blue_agent.epsilon:.3f}", True, (220, 220, 220)), (panel_x, 102))

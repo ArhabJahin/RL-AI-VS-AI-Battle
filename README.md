@@ -9,6 +9,14 @@
 
 ---
 
+## 📸 Demo
+
+<p align="center">
+  <img src="screenshots/demo.gif" width="700">
+</p>
+
+---
+
 ## Overview
 
 This project is a research-oriented reinforcement learning environment designed to compare two fundamentally different learning algorithms in a competitive multi-agent setting.
@@ -140,10 +148,10 @@ The reward system is designed to encourage long-term survival instead of short-t
 The simulator includes a real-time visualization interface displaying:
 
 - Live AI vs AI gameplay
-- Current score
+- Current scores
 - Best score
 - Snake lengths
-- Movement speed
+- Agent Movement speed
 - Training statistics
 - Learning progress
 - Food collection graphs
@@ -152,6 +160,18 @@ The simulator includes a real-time visualization interface displaying:
 - Loss values
 - TD Error
 - Exploration rate
+
+## Game UI
+
+<img src="screenshots/demo1.png">
+
+## Comparison UI
+
+<img src="screenshots/Info_UI.png">
+
+## Graph UI
+
+<img src="screenshots/Graph_UI.png">
 
 ---
 
@@ -201,8 +221,7 @@ RL-AI-vs-AI-Battle/
 │
 ├── main.py
 ├── requirements.txt
-├── README.md
-└── .gitignore
+└── README.md
 ```
 
 ---
@@ -212,13 +231,13 @@ RL-AI-vs-AI-Battle/
 Clone the repository
 
 ```bash
-git clone https://github.com/USERNAME/REPOSITORY.git
+git clone https://github.com/ArhabJahin/RL-AI-VS-AI-Battle.git
 ```
 
 Move into the project
 
 ```bash
-cd REPOSITORY
+cd RL-AI-VS-AI-Battle
 ```
 
 Install dependencies
@@ -255,6 +274,9 @@ python main.py
 - PyTorch
 - NumPy
 - Pygame
+- Deep Reinforcement Learning
+- Rainbow DQN-lite
+- Tabular Q-Learning
 - Pickle
 - CSV
 
@@ -269,7 +291,7 @@ This project investigates:
 - Multi-Agent Learning
 - Reward Engineering
 - Self-Play Training
-- Deep vs Classical RL
+- Deep RL vs Classical RL
 - Adaptive AI Behavior
 
 ---
@@ -325,17 +347,18 @@ All rights are reserved by the author until an official publication and licensin
 
 **Arhab Jahin Bhuiyan**
 
-_email: arhabjahin.b@gmail.com_
-
 Department of Computer Science
 
 Research Interests
 
 - Reinforcement Learning
 - Artificial Intelligence
+- Machine Learning
 - Deep Learning
 - Multi-Agent Systems
 - Computer Vision
+
+_email: arhabjahin.b@gmail.com_
 
 ---
 
