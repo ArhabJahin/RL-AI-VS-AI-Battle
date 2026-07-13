@@ -205,7 +205,7 @@ This allows direct comparison of learned policies.
 # Directory Structure
 
 ```
-RL-AI-vs-AI-Battle/
+RL-AI-VS-AI-Battle/
 │
 ├── models_red_dqn/
 │   ├── red_snake_dueling_ddqn_nstep_v1.pth
