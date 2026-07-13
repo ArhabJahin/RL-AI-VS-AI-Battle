@@ -1613,7 +1613,7 @@ while True:
         panel_x = BOARD_WIDTH + 10
         pygame.draw.rect(screen, (10, 12, 20), (BOARD_WIDTH, 0, PANEL_WIDTH, BOARD_HEIGHT))
         screen.blit(font.render("Algorithm Comparison", True, (220, 220, 220)), (panel_x, 12))
-        screen.blit(small_font.render(f"Red DQN {red_agent.episodes} | best {red_agent.best_score}", True, (255, 140, 140)), (panel_x, 40))
+        screen.blit(small_font.render(f"Red DQN episodes {red_agent.episodes} | best {red_agent.best_score}", True, (255, 140, 140)), (panel_x, 40))
         screen.blit(small_font.render(f"Blue Q episodes {blue_agent.episodes} | best {blue_agent.best_score}", True, (120, 200, 255)), (panel_x, 60))
         screen.blit(small_font.render(f"Red loss {red_agent.last_loss:.3f} td {red_agent.last_td_error:.2f} eps {red_agent.epsilon:.3f}", True, (220, 220, 220)), (panel_x, 82))
         screen.blit(small_font.render(f"Blue qstates {len(blue_agent.qtable)} eps {blue_agent.epsilon:.3f}", True, (220, 220, 220)), (panel_x, 102))
